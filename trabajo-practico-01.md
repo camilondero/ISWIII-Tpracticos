@@ -2,45 +2,54 @@ Trabajo Práctico 1 - Git Básico
 1.  Instalar Git
 Baje e instale el cliente git desde  https://git-scm.com/ y baje e instale el cliente visual, TortoiseGit. 
 
-2. Crear un repositorio local y agregar archivos
-Crear un repositorio local en un nuevo directorio.
-Agregar un archivo Readme.md, agregar algunas líneas con texto a dicho archivo.
-Crear un commit y proveer un mensaje descriptivo.
+2. Crear un repositorio local y agregar archivos.
+
+Creamos una carpeta para nuestro repositorio y lo inicializamos.
 	
-	
-	mkdir TpIngSoft3
-	
-	cd TpIngSoft3
-	
+	mkdir IngSoft3 
 	git init
-	Initialized empty Git repository in C:/Users/Camila/Desktop/FACULTAD/4º Año/2 SEMESTRE/ISWIII/TpIngSoft3/.git/
+	
+Agregar un archivo Readme.md, agregar algunas líneas con texto a dicho archivo.
 	
 	echo tp 1 ingenieria de software III > Readme.md
 	
+	
 3. Crear un repositorio remoto
 	Creamos una cuesta en git, luego creamos nuestro repositorio llamado 'ISWIII-Tpracticos'. 
-	Con el comando git remote add origin  https://github.com/camilondero/ISWIII-Tpracticos.git asociamos nuestro repositorio local a nuestro repositorio remoto de github.
-	Para subir nuestros cambios locales al repositorio debemos agregar los cambios realizados con el comando git add . , commiteralos con git commit -m "primer commit" y 	         luego pusheralos al main con el comando git push -u origin main. 
+	Con este comando asociamos nuestro repositorio local a nuestro repositorio remoto de github:
+	
+		git remote add origin  https://github.com/camilondero/ISWIII-Tpracticos.git 
+		
+	Para subir nuestros cambios locales al repositorio debemos agregar los cambios realizados con los comando: 
+		
+		git add . 
+		git commit -m "primer commit"  
+		git push -u origin main. 
 	
 4. Familiarizarse con el concepto de Pull Request
 Explicar que es un pull request.
 		
-	Un pull request es una petición para integrar nuestras propuestas o cambios de código a un proyecto.
-	Un pull request es una petición que el propietario de un fork de un repositorio hace al propietario del repositorio original para que este último incorpore los commits que están en el fork.
+Un pull request es una petición para integrar nuestras propuestas o cambios de código a un proyecto.
+Un pull request es una petición que el propietario de un fork de un repositorio hace al propietario del repositorio original para que este último incorpore los commits que están en el fork.
 	
 Crear un branch local y agregar cambios a dicho branch.
-	Utilizamos este commit para crear otra rama git branch branch1 y con este comando nos paramos en esa rama git checkout branch1. Despues, agregamos una nueva linea de texto al archivo Readme.md-
-		
-Subir el cambio a dicho branch y crear un pull request.
-Completar el proceso de revisión en github y mergear el PR al branch master.
+
+Utilizamos este commit para crear otra rama:
 	
+	git branch branch1 
+y con este comando nos paramos en esa rama: 
+
+	git checkout branch1
+Despues, agregamos una nueva linea de texto al archivo Readme.md
+		
 Subimos los cambios a branch1, con esta serie de comandos:
 	
 	git status
 	git add .
 	git commit -m "new branch"
 	git push origin branch1
-	Y luego creamos el pull request y hacemos el merge:
+
+Y luego creamos el pull request y hacemos el merge:
 		
 ![Image text](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/PR%201.png)
 ![Image text](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/PR2.png)
