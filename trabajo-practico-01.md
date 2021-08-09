@@ -1,8 +1,8 @@
 Trabajo Práctico 1 - Git Básico
-1- Instalar Git
+1.  Instalar Git
 Baje e instale el cliente git desde  https://git-scm.com/ y baje e instale el cliente visual, TortoiseGit. 
 
-2- Crear un repositorio local y agregar archivos
+2. Crear un repositorio local y agregar archivos
 	• Crear un repositorio local en un nuevo directorio.
 	• Agregar un archivo Readme.md, agregar algunas líneas con texto a dicho archivo.
 	• Crear un commit y proveer un mensaje descriptivo.
@@ -17,12 +17,12 @@ Baje e instale el cliente git desde  https://git-scm.com/ y baje e instale el cl
 	
 	echo tp 1 ingenieria de software III > Readme.md
 	
-	3- Crear un repositorio remoto
+3. Crear un repositorio remoto
 	Creamos una cuesta en git, luego creamos nuestro repositorio llamado 'ISWIII-Tpracticos'. 
 	Con el comando git remote add origin  https://github.com/camilondero/ISWIII-Tpracticos.git asociamos nuestro repositorio local a nuestro repositorio remoto de github.
 	Para subir nuestros cambios locales al repositorio debemos agregar los cambios realizados con el comando git add . , commiteralos con git commit -m "primer commit" y luego pusheralos al main con el comando git push -u origin main. 
 	
-	4- Familiarizarse con el concepto de Pull Request
+4. Familiarizarse con el concepto de Pull Request
 		• Explicar que es un pull request.
 		
 	Un pull request es una petición para integrar nuestras propuestas o cambios de código a un proyecto.
@@ -44,7 +44,7 @@ Baje e instale el cliente git desde  https://git-scm.com/ y baje e instale el cl
 				
 
 
-	5- Mergear código con conflictos
+5. Mergear código con conflictos
 	Clonamos el repositorio en otro directorio con el siguiente comando:
 	git clone https://github.com/camilondero/ISWIII-Tpracticos.git
 	
