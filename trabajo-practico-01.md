@@ -83,13 +83,11 @@ Este es el error devuelto por línea de comandos:
 	
 	
 Hacer pull y mergear el código (solo texto por ahora), mostrar la herramienta de mergeo como luce.
-![Image text](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/Conflictos1.png)
 	
 	
 
 Resolver los conflictos del código.
 
-![Image text](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/conflictos2.png)
 	
 	
 Explicar las versiones LOCAL, BASE y REMOTE.
