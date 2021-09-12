@@ -4,20 +4,27 @@
    - Ejecutar el siguiente comando para crear una red en docker
 
           docker network create -d bridge mybridge
-
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-1.png)
    - Instanciar una base de datos Redis conectada a esa Red.
 
           docker run -d --net mybridge --name db redis:alpine
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-2.png)
 
    - Levantar una aplicacion web, que utilice esta base de datos
 
           docker run -d --net mybridge -e REDIS_HOST=db -e REDIS_PORT=6379 -p 5000:5000 --name web alexisfr/flask-app:latest
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-3.png)
 
    - Abrir un navegador y acceder a la URL: http://localhost:5000/
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-4.png)
+
    - Verificar el estado de los contenedores y redes en Docker, describir:
        - ¿Cuáles puertos están abiertos?
-       - Mostrar detalles de la red mybridge con Docker.
-       - ¿Qué comandos utilizó?
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-5.png)
+
+   - Mostrar detalles de la red mybridge con Docker.
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-6.png)
+
 
 2- Análisis del sistema
 
@@ -45,16 +52,21 @@
               app.run(host="0.0.0.0", debug=True, port=bind_port)
 
    - Explicar cómo funciona el sistema
+ El sistema va a incrementar un contador de hits cada vez que se acceda al puerto especificado y se va a mostrar el total de hits en pagina.
    - ¿Para qué se sirven y porque están los parámetros -e en el segundo Docker run del ejercicio 1?
    - ¿Qué pasa si ejecuta docker rm -f web y vuelve a correr docker run -d --net mybridge -e REDIS_HOST=db -e REDIS_PORT=6379 -p 5000:5000 --name web alexisfr/flask-app:latest ?
+Cuando ejecutamos el comando docker rm borramos  el contenedor donde esta la aplicacion web y si hacemos docker run lo volvemos a levantar.
    - ¿Qué occure en la página web cuando borro el contenedor de Redis con docker rm -f db?
+ Si borro la base de datos la pagina web localhost:5000 nos mostraria un error porque se elimino la bd en donde estaban almacenados los datos.
    - Y si lo levanto nuevamente con docker run -d --net mybridge --name db redis:alpine ?
+ Si levanto nuevamente el contenedor la pagina web vuelve a funcionar.
    - ¿Qué considera usted que haría falta para no perder la cuenta de las visitas?
    - Para eliminar los elementos creados corremos:
 
           docker rm -f db
           docker rm -f web
           docker network rm mybridge
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-7.png)
 
 3- Utilizando docker compose
 
@@ -82,14 +94,18 @@
                 - redis_data:/data
           volumes:
             redis_data:
-
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-8.png)
    - Ejecutar docker-compose up -d
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-9.png)
    - Acceder a la url http://localhost:5000/
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-10.png)
    - Ejecutar docker ps, docker network ls y docker volume ls
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-11.png)
    - ¿Qué hizo Docker Compose por nosotros? Explicar con detalle.
    - Desde el directorio donde se encuentra el archivo docker-compose.yaml ejecutar:
 
         docker-compose down
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-12.png)
 
 4- Aumentando la complejidad, análisis de otro sistema distribuido.
 
@@ -110,8 +126,10 @@ Pasos:
           docker-compose -f docker-compose-javaworker.yml up -d
 
    - Una vez terminado acceder a http://localhost:5000/ y http://localhost:5001
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-13.png)
    - Emitir un voto y ver el resultado en tiempo real.
    - Para emitir más votos, abrir varios navegadores diferentes para poder hacerlo
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-14.png)
    - Explicar como está configurado el sistema, puertos, volumenes componenetes involucrados, utilizar el Docker compose como guía.
 
 5- Análisis detallado
