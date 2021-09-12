@@ -4,25 +4,32 @@
    - Ejecutar el siguiente comando para crear una red en docker
 
           docker network create -d bridge mybridge
+          
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-1.png)
+
    - Instanciar una base de datos Redis conectada a esa Red.
 
           docker run -d --net mybridge --name db redis:alpine
+          
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-2.png)
 
    - Levantar una aplicacion web, que utilice esta base de datos
 
           docker run -d --net mybridge -e REDIS_HOST=db -e REDIS_PORT=6379 -p 5000:5000 --name web alexisfr/flask-app:latest
+          
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-3.png)
 
    - Abrir un navegador y acceder a la URL: http://localhost:5000/
+   
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-4.png)
 
    - Verificar el estado de los contenedores y redes en Docker, describir:
        - ¿Cuáles puertos están abiertos?
+       
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-5.png)
 
    - Mostrar detalles de la red mybridge con Docker.
+   
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-6.png)
 
 
@@ -66,6 +73,7 @@ Cuando ejecutamos el comando docker rm borramos  el contenedor donde esta la apl
           docker rm -f db
           docker rm -f web
           docker network rm mybridge
+          
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-7.png)
 
 3- Utilizando docker compose
@@ -96,15 +104,22 @@ Cuando ejecutamos el comando docker rm borramos  el contenedor donde esta la apl
             redis_data:
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-8.png)
    - Ejecutar docker-compose up -d
+   - 
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-9.png)
+
    - Acceder a la url http://localhost:5000/
+   - 
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-10.png)
+
    - Ejecutar docker ps, docker network ls y docker volume ls
+   - 
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-11.png)
+
    - ¿Qué hizo Docker Compose por nosotros? Explicar con detalle.
    - Desde el directorio donde se encuentra el archivo docker-compose.yaml ejecutar:
 
         docker-compose down
+        
 ![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp3-12.png)
 
 4- Aumentando la complejidad, análisis de otro sistema distribuido.
