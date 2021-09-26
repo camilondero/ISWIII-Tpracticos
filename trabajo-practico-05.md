@@ -1,27 +1,17 @@
-Trabajo Práctico 5 - Herramientas de construcción de software
-1- Objetivos de Aprendizaje
-Utilizar herramientas de construcción de software y manejo de paquetes y dependencias
-Familiarizarse con las herramientas más utilizadas en el lenguaje Java.
-2- Unidad temática que incluye este trabajo práctico
-Este trabajo práctico corresponde a la unidad Nº: 3 (Libro Continuous Delivery: Cap 6 y 13)
+###Trabajo Práctico 5 - Herramientas de construcción de software
 
-3- Consignas a desarrollar en el trabajo práctico:
-Las aplicaciones utilizadas son del tipo "Hello World", dado que el foco del trabajo práctico es como construirlas y no el funcionamiento de la aplicación en sí.
-En los puntos en los que se pida alguna descripción, realizarlo de la manera más clara posible.
 4- Desarrollo:
+
 1- Instalar Java JDK si no dispone del mismo.
-Java 8 es suficiente, pero puede utilizar cualquier versión.
-Utilizar el instalador que corresponda a su sistema operativo
-http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-Agregar la variable de entorno JAVA_HOME
-En Windows temporalmente se puede configurar
-  SET JAVA_HOME=C:\Program Files\Java\jdk1.8.0_221
-O permanentemente entrando a Variables de Entorno (Winkey + Pausa -> Opciones Avanzadas de Sistema -> Variables de Entorno)
-Otros sistemas operativos:
-https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html
-https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
+  - Java 8 es suficiente, pero puede utilizar cualquier versión.
+  - Utilizar el instalador que corresponda a su sistema operativo
+  http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+  - Agregar la variable de entorno JAVA_HOME
+
 2- Instalar Maven
-Instalar maven desde https://maven.apache.org/download.cgi (última versión disponible 3.6.1)
+
+  - Instalar maven desde https://maven.apache.org/download.cgi (última versión disponible 3.6.1)
 
 Descomprimir en una carpeta, por ejemplo C:\tools
 
