@@ -38,16 +38,16 @@
 
 Realizamos un cat al archivo docker-compose.yml y buscamos los contenedores creados:
 
- - Catalogue
+ - Catalogue: Catalogo de medias
  - Catalogue_db: Base de datos mysql donde se almacenan los produtos del catalogo.
  - Queue-master
  - Edge-router: punto de acceso al sistema.
- - Front-end
- - Payment
+ - Front-end: Diseño de la pagina 
+ - Payment: Maneja los pagos de los productos
  - Carts
  - Carts_db
- - Orders
- - Orders_db
+ - Orders: Administra las ordenes de compra.
+ - Orders_db: Base de datos
  - User
  - User_db
  - Shipping
