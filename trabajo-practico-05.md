@@ -35,13 +35,16 @@
 
 #### 3- Introducción a Maven
 - Qué es Maven?
-
+Maven es una herramienta que se utiliza en la gestión y construcción de software. Posee la capacidad de realizar ciertas tareas claramente definidas, como la compilación del código y su empaquetado. Es decir, hace posible la creación de software con dependencias incluidas dentro de la estructura del JAR. Es necesario definir todas las dependencias del proyecto (librerías externas utilizadas) en un fichero propio de todo proyecto Maven, el POM (Project Object Model). 
 - Qué es el archivo POM?
-    1. modelVersion
-    2. groupId
-    3. artifactId
-    4. versionId
+Un modelo de objeto de proyecto o POM es la unidad fundamental de trabajo en Maven. Es un archivo XML que contiene información sobre el proyecto y los detalles de configuración utilizados por Maven para construir el proyecto. Contiene valores predeterminados para la mayoría de los proyectos.
+    1. modelVersion: Declare qué versión del modelo POM sigue el descriptor del proyecto.
+    2. groupId: El logo único de la empresa u organización, y la ruta generada durante la configuración también se genera a partir de este
+    3. artifactId: El ID único de este proyecto.
+    4. versionId: El número de versión actual de este proyecto
 - Repositorios Local, Central y Remotos http://maven.apache.org/guides/introduction/introduction-to-repositories.html
+Los repositorios remotos se refieren a cualquier otro tipo de repositorio, al que se accede mediante una variedad de protocolos como file://y https://. 
+El repositorio local es un directorio en la computadora donde se ejecuta Maven.
 - Entender Ciclos de vida de build
   - default
   - clean
@@ -80,6 +83,7 @@ mvn clean install
 ```
 
 - Sacar conclusiones del resultado
+Luego de terminada la instalacion, en la carpeta del archivo pom.xml se crea otra carpeta llamada Target 
 
 #### 4- Maven Continuación
 
