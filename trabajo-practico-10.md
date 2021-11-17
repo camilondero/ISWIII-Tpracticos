@@ -115,6 +115,7 @@ Scenario('test something', (I) => {
 
 - Finalmente correr el test:
 ```npx codeceptjs run --steps```
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp10-1.png)
 
 - Agregamos otras validaciones
 ```javascript
@@ -126,6 +127,8 @@ Scenario('test something', ({ I }) => {
     I.seeElement("//li[contains(.,'© 2020 GitHub, Inc.')]")
 });
 ```
+![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp10-2.png)
+
 - Para generar selectores fácilmente utilizamos plugins como (Firefox o Chrome)
   - TruePath https://addons.mozilla.org/en-US/firefox/addon/truepath/
   - ChroPath https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo
