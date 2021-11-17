@@ -115,7 +115,6 @@ Scenario('test something', (I) => {
 
 - Finalmente correr el test:
 ```npx codeceptjs run --steps```
-![imagen](https://github.com/camilondero/ISWIII-Tpracticos/blob/main/Images/tp10-1.png)
 
 - Agregamos otras validaciones
 ```javascript
